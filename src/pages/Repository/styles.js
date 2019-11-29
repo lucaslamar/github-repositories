@@ -7,7 +7,7 @@ export const Loading = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 `;
 
 export const Owner = styled.header`
@@ -16,20 +16,20 @@ export const Owner = styled.header`
   align-items: center;
 
   a {
-    color: #71c;
+    color: #7159c1;
     font-size: 16px;
     text-decoration: none;
   }
 
   img {
     width: 120px;
-    border-radius: 50px;
+    border-radius: 50%;
     margin-top: 20px;
   }
 
   h1 {
     font-size: 24px;
-    margin-top: 14px;
+    margin-top: 10px;
   }
 
   p {
@@ -43,7 +43,7 @@ export const Owner = styled.header`
 `;
 
 export const IssueList = styled.ul`
-  padding-top: 30px;
+  padding-top: 15px;
   margin-top: 30px;
   border-top: 1px solid #eee;
   list-style: none;
@@ -64,6 +64,7 @@ export const IssueList = styled.ul`
       border-radius: 50%;
       border: 2px solid #eee;
     }
+
     div {
       flex: 1;
       margin-left: 15px;
@@ -79,6 +80,7 @@ export const IssueList = styled.ul`
             color: #7159c1;
           }
         }
+
         span {
           background: #eee;
           color: #333;
@@ -90,11 +92,51 @@ export const IssueList = styled.ul`
           margin-left: 10px;
         }
       }
+
       p {
         margin-top: 5px;
         font-size: 12px;
         color: #999;
       }
+    }
+  }
+`;
+
+export const IssueFilter = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+  button {
+    border-radius: 4px;
+    outline: 0;
+    border: 0;
+    padding: 8px;
+    margin: 0 0.25rem;
+
+    &:nth-child(${props => props.active + 1}) {
+      background: #576574;
+      color: white;
+    }
+  }
+`;
+
+export const PageActions = styled.div`
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+
+  button {
+    transition: opacity 0.25s ease-out;
+    border-radius: 4px;
+    outline: 0;
+    border: 0;
+    padding: 8px;
+
+    &:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
     }
   }
 `;
