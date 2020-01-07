@@ -4,9 +4,9 @@
 
 </h3>
 <p align="center">
-  <b>Github Users</b> é uma simples single page que usa api to Github para fazer a listagem de Repostitorios e mostrar os detalhes do mesmo, vale lembra que o projeto utiliza ' . <br>  styled-components 💅</p>
+  <b>Github Users</b> é uma simples single page que usa api to Github para fazer a listagem de Repostitorios e mostrar os detalhes do mesmo, vale lembra que o projeto utiliza,styled-components💅</p>
 
-![demo](../assets/demo.png)
+![demo](blob/master/src/assets/demo.png)
 
 
 
