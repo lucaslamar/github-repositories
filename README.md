@@ -1,69 +1,74 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">GitHub Users</h1>
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `yarn start`
+</h3>
+<p align="center">
+  <b>Github Users</b> é uma simples single page que usa api to Github para fazer a listagem de Repostitorios e mostrar os detalhes do mesmo, vale lembra que o projeto utiliza ' . <br>  styled-components 💅</p>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![demo](../assets/demo.png)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Support
+- [Become a backer or sponsor on Patreon](https://www.patreon.com/arturbien).
+- [One-time donation via PayPal](https://www.paypal.me/react95)
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
+First, install component library and styled-components in your project directory:
+```sh
+$ npm i react95 styled-components
+```
+Apply style reset, wrap your app content with ThemeProvider with theme of your choice... and you are ready to go! 🚀
+```jsx
+import React from "react";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { reset, themes, List, ListItem, Divider } from "react95";
 
-### `yarn build`
+const ResetStyles = createGlobalStyle`
+  ${reset}
+`;
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+export default props =>
+  <div className="App">
+    <ResetStyles />
+    <ThemeProvider theme={themes.default}>
+      <List>
+          <ListItem>🎤 Sing</ListItem>
+          <ListItem>💃🏻 Dance</ListItem>
+          <Divider />
+          <ListItem disabled>😴 Sleep</ListItem>
+      </List>
+    </ThemeProvider>
+  </div>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Explore
+You can view components on [Storybook](https://arturbien.github.io/React95/). If you want to play with it locally, simply clone the repo and run commands below:
+```sh
+$ npm i
+$ npm run storybook
+```
+### Submit your project
+Apps built with React95 will be submitted on the official React95 [website](https://react95.io) 🤟🏻
 
-### `yarn eject`
+### Contributing
+**We are not attempting to exactly RECREATE Windows95 components. We are going to make them usable in the modern mobile / web apps.
+Thus, any help from UI / UX designers would be EXTREMELY appreciated. The challenge is to come up with new component designs / layouts that are broadly used in modern UIs, that weren't present back in 95.**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+There's a lot to do. If you want to help with the project, feel free to open pull requests and submit issues. Let's make UI great again 🔥
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Roadmap
+There's quite a few things to be done:
+- Styled system
+- Lots of tacky color schemes 🌈
+- Custom icons maybe? (Emojis from Windows 10 seem to go very well with the lib)
+- Typography
+- Range slider component
+- Avatar component
+- Components common in all modern UIs (FAB, Badge, Avatar, Snackbar, Steppers)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# github-users
+And the boring stuff too:
+- Testing
+- Semantic release
+- eslint
