@@ -9,7 +9,7 @@
 <p align="center">
   <b>Github Repositories</b> é uma simples single page que usa api to Github para fazer a listagem de Repostitorios e mostrar os detalhes do mesmo, vale lembrar que o projeto utiliza,styled-components💅</p>
 
-<img  src="https://github.com/lucaslamar/github-users-desafio-5/blob/master/src/assets/demo.png">
+<img src="src/assets/readme.png">
 
 
 
